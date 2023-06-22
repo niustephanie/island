@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/flag.png"/>
+<title>News</title>
+</head>
+
+<body>
+
+<div class="horizontal-flex flex-between">
+        <<div class="sidebar-text"><a href="index.html" style="color:black"><h1 class="fade">Island of Talking Walls</h1></a></div>
+        <nav>
+          <a href="index.html" class="label fade">Home</a>
+          <a href="talkingmaps.html" class="label fade">Talking Maps</a>
+          <!--<div class="dropdown">
+          <a href="poetry.html" class="label fade">Publications</a>
+            <div class="dropdown-content">
+              <a href="chapbook.html" class="label fade">We Want Fair Trail</a>
+              <a href="teaching.html" class="label fade">When Walls Talk Back</a>
+              </div>
+            </div>-->
+          <a href="news.html" class="label fade selected">News</a>
+          <a href="about.html" class="label fade">About</a>
+        </nav>
+</div>
+
+<h1>Project News</h1>
+<div class="vertical-flex">
+
+
+
+<!-- Image with caption swapped--> 
+<div class="horizontal-flex">
+
+ <div class="sidebar-text">
+    <a href="#islander"><h2 id="islander">Inaugural Talking Maps workshop featured in "The Islander"</h2></a>
+    <!--<img src="images/link.png" style="width:20px"></img>
+    <button onclick="copyLink(this.parentElement.id)">copy</button>--> 
+    <p>June 2, 2023</p>
+    <p>Following the debut of the public event series "Talking Maps" at Christmas Island's George Fam Centre in late May, the workshop received coverage in the island's local newsletter, The Islander. "Participants in the workshop revealed numerous recollections of the George Fam Building from when it was a school until 1987 and the local government offices from 1992," says the article. <br><br> "School memories from a workshop participant revealed boys smoking behind the male toilets (classic), fights on the school bus (what happened on the school bus, stayed on the school bus) and stories of a world war 2, possibly Japanese, concrete pillbox bunker adjacent to the walkable incline where students would visit that has since been demolished." The article also highlighted a key draw of the event- 1970s secondary school canteen food at 1970s prices. "Talking Maps [workshopers] certainly loved the day’s experience – and the 1975 priced school lunch items at the end! 25c nasi lemak, curry puffs, mee siam and delicious Malay dessert kueh!" Read the full article on the Shire of Christmas Island website. </p>
+    <button onclick="window.open('https://drive.google.com/file/d/1YFW7tvE85DT6EwYXu0ddyk17ihEOU4Do/view?usp=drive_link', '_blank');"><p class="button-text">Read Article</p></button>
+  </div>
+  <div class="sidebar-img"><img src="images/islander.jpg"/></div>
+
+  <div class="break"></div>
+
+  <div class="sidebar-text">
+    <a href="#veterans"><h2 id="veterans">Reanimating History" receives funding from Department of Veterans' Affairs to Commemorate WWII History</h2></a>
+    <p>May 12, 2023</p>
+    <p>"Reanimating History" has been awarded funding through the Saluting their Service Commemorative Grants Program through the Department of Veterans' Affairs. This funding will support the creation of immersive digital experiences about the history of Christmas Island and its Japanese occupation during the Second World War, focusing on physical structures built and used during wartime.<br><br>
+    Thank you to the Department of Veterans' Affairs for supporting this project! </p>
+  </div>
+  <div class="sidebar-img"><img src="https://christmasislandarchives.com/wp-content/uploads/2019/07/teacup-13.jpg"/>
+    <p>Commemorative plaque and gun emplacement near Tai Jin House on Christmas Island in memory of British troops murdered in 1942. Source: <a href="https://christmasislandarchives.com/teacup-in-a-storm-christmas-island-in-ww2/">Christmas Island Archives.</a></p></div>
+
+</div>
+
+<p id="footer">Built by Stephanie Niu, 2023</p>
+</div>
+</body>
+
+<script>
+function copyLink(current_id) {
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(window.location.href + "#" + current_id);
+}
+</script>
