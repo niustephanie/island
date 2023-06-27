@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="images/flag.png"/>
+<script src="https://d3js.org/d3.v6.min.js"></script>
 
 <title>Talking Atlas</title>
 </head>
@@ -42,9 +43,92 @@ Each Talking Maps event brings Islanders together at a historic site on Christma
 <div class="vertical-flex">
   <h2>Talking Maps #1: George Fam Centre</h2>
       <p class="center-text"> The first Talking Maps event was held on May 27, 2023 and focused on the George Fam Centre (formerly known as the Christmas Island Asian School). Read more about the inaugural Talking Maps event in <a href="https://drive.google.com/file/d/1YFW7tvE85DT6EwYXu0ddyk17ihEOU4Do/view?usp=drive_link">The Islander newsletter</a> (published by the Shire of Christmas Island). <br><br> Map results from event coming soon.</p>
-  <img class="centered" src="images/gf_maps.png" />
+      <img src="images/gf_maps.png"></img>
 
-</body>
+</div>
+
+<!--Must specify height/width in the markup directly. These values are the dimensions of the George Fam basemap. -->
+<!--<canvas width="2102" height="1668" id="georgefam"></canvas>-->
 
 <p id="footer">Built by Stephanie Niu, 2023</p>
-</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Caveat']
+    }
+  });
+
+function drawNewImage(ctx, imageSource, x, y) {
+  let img = new Image();
+  img.onload = () => {
+    ctx.drawImage(img, x, y);
+  };
+  img.src = imageSource;
+}
+
+window.onload = function() {
+  const canvas = document.getElementById("georgefam");
+  const ctx = canvas.getContext("2d");
+
+  // Add the basemap
+  let img = new Image();
+  img.onload = () => {
+    ctx.drawImage(img, 0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    // Run python3 -m http.server to spin up a local server
+    d3.csv("http://localhost:8000/data/georgefam.csv", function(data) {
+    for (var i = 0; i < data.length; i++) {
+        console.log(data[i].Name);
+        console.log(data[i].Age);
+        type = data[i].Type;
+        source = data[i].Source;
+
+        if (type == "text") addText(ctx, source, data.X, data.Y);
+        else drawNewImage(ctx, source, data.X, data.Y);
+      }
+    //}).then(function(data){
+
+    });
+
+    // Add the data (test run with images and text hard-coded)
+    drawNewImage(ctx, "images/bossun.jpeg", 1607, 0);
+    drawNewImage(ctx, 'images/pink1.png', 1494.5, 809);
+  
+    ctx.font = "32px Monaco";
+    ctx.fillStyle = "#7179CF";
+    ctx.fillText("Ocean View", 1728, 1178);
+    ctx.fillText("- Sight of imposing mountain", 62, 182);
+    ctx.fillText("- Contrast of buildings against green background", 62, 216);
+
+
+  };
+ 
+  img.src = 'images/GF_basemap.png';
+  
+
+/* For each row in (georgefam.csv) 
+  x = sheet.getColumnByName('x')
+  y = sheet.getColumnByName('y');
+  source = sheet.getColumnByName('source')
+
+  if image, drawImage(ctx, source, x, y)
+  if text, addText(ctx, source, x, y)
+*/
+
+ /* const img = new Image;
+  ctx.drawImage(img, 0, 0);
+  img.src = "images/GF_basemap.png";*/
+/*
+
+  image.src = "https://lh3.googleusercontent.com/pw/AJFCJaWVA6iybrAh05xgYMSQlLp-AuEjXJts8nMycKTcFnZB0uDl2HSY7MOGuNR1CX4HTEOgMhGhavEOq5YaTX4AxDKhyglfVpLcEx2C6twVbpRXBzKlAlPBzU_kKTfA5S712oe4yZoLf5LTiib3Hq9dg70dxUBwi__OXePqOW_O0wJDi-6X0l_RnClIF2CGwFb37p1aIVrzTL7OP99vZr80OKnyYysR07eJ8jzD4fMLiL_fij2_SDO7UdEW5fEbTRHeHcbdPZOD1RGZ7-1n_RU2zPWs-4syj9gKsDYkaRowqlqNFJfYng3-91dBWu2JQqhFdP6MvrZyEybOoZ6hn4KL0Z9CpOkFGo4v8dwOTXF3Wdohgv6zZhDNeLBIAwBB6oumLGkhW_NqcHRRg2e11kigSivNIb7rwGIWBH6ByFpSS1HW_V9EZkGukt0acUQhrXgDCJ8ppwpgh_0w1XWamKy8S71H2l6tWA8JmFDDXP9-jIBlpCQ8ZuDTGGUxAerldZ1vY4Q_5rmC8WrQ-cOj_y2IsKLJxQMkuPhXB4E4EZp9Le6sFXQRdNu8pJMlWIPy0Z9ATXTGcihTec-Y9YfrM4KjArL-aLi1pVQPzza5Acs17oBPfVfjFuqdBqvDI4fSSkwkqshZPv6ntv5yF_Diu8R_LRGI3ra9A3ShwLpED0PqkkjlmS1bLkG_8SCJAyHDu_RprlVw9sSzZNAeUMJj1wC46p0qgbxTd6xT_T6bM6ZZf1JtH_Dl-LmddU6pqiUTVnlFtfP8tDcKP4fc3i6e2er9pNwK2htqQiEVLxFo1qIdwqwBPOc7WfsCUE7RLe9TzLDxnKv-880hKv9Jn1nHYSvxNTvE29nO7FCJ0xaRb8HOsXLp7W3zIynf_yFF-P05wqQFdGQvzYGUXxuwzZMk308JtfIhfTU=w280-h116-s-no?authuser=0"*/
+};
+
+
+
+</script>
+
+
+
