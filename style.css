@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&&family=Poppins&family=Courier+Prime&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Courier+Prime&&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 
 a {
@@ -7,6 +7,7 @@ a {
   text-align: center;
   font-size: 16px;
   text-decoration: none;
+  font-weight: bold;
   color: #99BFF6;
 }
 
@@ -81,11 +82,17 @@ button:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Poppins";
+  font-family: "Newsreader";
+  font-weight: 400;
   /*color: #FCEFC8;*/
   text-align: center;
   padding: 10px;
   margin: auto;
+}
+
+h1 {
+    font-style: italic;
+    font-weight: 500;
 }
 
 .horizontal-flex {
@@ -127,6 +134,7 @@ nav {
 
 p {
   font-family: "Inter";
+  line-height: 20px;
 }
 
 .selected {
