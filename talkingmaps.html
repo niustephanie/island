@@ -77,9 +77,10 @@ window.onload = function() {
   let img = new Image();
   img.onload = () => {
     ctx.drawImage(img, 0, 0, ctx.canvas.width, ctx.canvas.height);
-
     // Run python3 -m http.server to spin up a local server
     d3.csv("data/georgefam.csv", function(data) {
+        console.log("loading the csv");
+        console.log(data.length);
     // d3.csv("https://github.com/niustephanie/island/blob/main/data/georgefam.csv", function(data) {
     for (var i = 0; i < data.length; i++) {
         console.log(data[i].Name);
