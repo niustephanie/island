@@ -48,7 +48,7 @@ Each Talking Maps event brings Islanders together at a historic site on Christma
 </div>
 
 <!--Must specify height/width in the markup directly. These values are the dimensions of the George Fam basemap. -->
-<!--<canvas width="2102" height="1668" id="georgefam"></canvas>-->
+<canvas width="2102" height="1668" id="georgefam"></canvas>
 
 <p id="footer">Built by Stephanie Niu, 2023</p>
 </body>
@@ -79,7 +79,8 @@ window.onload = function() {
     ctx.drawImage(img, 0, 0, ctx.canvas.width, ctx.canvas.height);
 
     // Run python3 -m http.server to spin up a local server
-    d3.csv("http://localhost:8000/data/georgefam.csv", function(data) {
+    d3.csv("data/georgefam.csv", function(data) {
+    // d3.csv("https://github.com/niustephanie/island/blob/main/data/georgefam.csv", function(data) {
     for (var i = 0; i < data.length; i++) {
         console.log(data[i].Name);
         console.log(data[i].Age);
