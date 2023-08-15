@@ -21,9 +21,10 @@ body { margin: 0; padding: 0; }
         container: 'map', // container ID
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         // style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        style: 'mapbox://styles/niustephanie/cll0qqd8w004y01ojg9vx7pc0',
+        //style: 'mapbox://styles/niustephanie/cll0qqd8w004y01ojg9vx7pc0',
+        style: 'mapbox://styles/niustephanie/cllbturti00dw01pwcy5y6097',
         center: [105.630076,-10.477061], // starting center in [lng, lat]
-        zoom: 10 // starting zoom
+        zoom: 11 // starting zoom
     });
 
     // Add geolocate control to the map.
@@ -38,6 +39,35 @@ body { margin: 0; padding: 0; }
             showUserHeading: true
         })
     );
+
+    map.on('load', () => {
+
+    });
+
+    map.on('click', (event) => {
+      // If the user clicked on one of your markers, get its information.
+      const features = map.queryRenderedFeatures(event.point, {
+        layers: ['christmas-island-memories (1)'] // replace with your layer name
+      });
+      if (!features.length) {
+        return;
+      }
+      const feature = features[0];
+
+      /* 
+      Create a popup, specify its options 
+      and properties, and add it to the map.
+      */
+      const popup = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(
+          `<p>${feature.properties.Description}</p>
+          <p>From ${feature.properties.Source}, ${feature.properties.Date}</p>`
+        )
+        .addTo(map);
+    });
+
+
 </script>
 
 </body>
