@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Living Museum of Christmas Island</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+
+  <link rel="stylesheet" href="map_style.css">
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+  <script src="ciData.geojson"></script>
+</head>
+
+<body>
+	<div id="map">
+		<form class="form">
+    	<input id="search" type="text" class="input" placeholder="Search for events..." 
+    	onChange="filterData(this.value.toLowerCase())"/>
+      <button id="clear" class="clear-results">Clear</button>
+    </form>
+	</div>
+
+<script>
+	
+	// Set default view to Christmas Island, centered
+	var map = L.map('map').setView([-10.445,105.67], 13);
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    	maxZoom: 19,
+    	attribution: '© OpenStreetMap'
+	}).addTo(map);
+
+	var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "red",
+    color: "white",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: .5
+};
+
+	// For each feature in ciData, add a popup
+	function onEachFeature(feature, layer) {
+    	// Check that this feature has the properties to be displayed
+    	if (feature.properties && feature.properties.Description) {
+        	layer.bindPopup(`
+        		<h3>${feature.properties.Date}</h3>
+        		<p>${feature.properties.Description}</p>
+        		<p>From ${feature.properties.Source}</p>
+        	`);
+    	}
+	}
+
+	var markers = new Array();
+
+	// Adds all GeoJSON data to the map as a circular marker. Stores markers in an array for searching.
+	L.geoJSON(ciData, {
+    	pointToLayer: function (feature, latlng) {
+    		var marker = L.circleMarker(latlng, geojsonMarkerOptions);
+    		markers.push(marker);
+    		return marker;
+    	},
+    	onEachFeature: onEachFeature
+	}).addTo(map);
+
+	// Removes all markers whose popup content doesn't match the specified search term
+	function filterData(searchTerm) {
+			markers.forEach( function(marker) {
+				var textToSearch = marker._popup._content.toLowerCase();
+				// If the marker description doesn't include the search text, remove it
+				if (!textToSearch.includes(searchTerm)) { 
+					map.removeLayer(marker);
+				}
+			});
+	}
+</script>
+
+</body>
+</html>

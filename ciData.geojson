@@ -1,0 +1,229 @@
+var ciData = {
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Forty houses at the edge of Gaze road",
+        "Type": "photo",
+        "Place": "forty houses",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.67391,
+          -10.419034
+        ],
+        "type": "Point"
+      },
+      "id": "333fea487b1ba74c74657bf614f88159"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "\"Children from the families of the 40 houses in Settlement, now Police Padang. Photo taken 1968.\"",
+        "Type": "photo",
+        "Place": "forty houses",
+        "Date": "1968",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.67391,
+          -10.419034
+        ],
+        "type": "Point"
+      },
+      "id": "46b9ed3ba6721f14cf21ded8c6877983"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Date": "",
+        "Description": "former Asian swimming pool"
+      },
+      "geometry": {
+        "coordinates": [
+          105.673082,
+          -10.419494
+        ],
+        "type": "Point"
+      },
+      "id": "4c9faffb8df174e157a48585977a7b9e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Virgin's castle from Gaze Road with red car in foreground",
+        "Type": "photo",
+        "Place": "virgin's castle",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCFdDJnPKvdRFnvZVjx?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.673142,
+          -10.422497
+        ],
+        "type": "Point"
+      },
+      "id": "57cac0581e55b4dd0dc72e7155fa5075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Group photo outside yellow union house",
+        "Type": "photo",
+        "Place": "union office",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJQFRnrJrjpWcHBgNnH?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.679381,
+          -10.424716
+        ],
+        "type": "Point"
+      },
+      "id": "5ab7afdd5b1603d26b439b132f37d183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Group photo outside yellow union house",
+        "Type": "photo",
+        "Place": "union office",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJQFRnrJrjpWcHBgNnH?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.679381,
+          -10.424716
+        ],
+        "type": "Point"
+      },
+      "id": "71ccaeb9c0d419d9825386b4580ffa79"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Forty houses at the edge of Gaze road",
+        "Type": "photo",
+        "Place": "forty houses",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.67391,
+          -10.419034
+        ],
+        "type": "Point"
+      },
+      "id": "98053a0b5dfeae5fe13dd51d8bf305c9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Yellow union building with yellow car",
+        "Type": "photo",
+        "Place": "union office",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJjbwVStfvzLgbwphQW"
+      },
+      "geometry": {
+        "coordinates": [
+          105.679381,
+          -10.424716
+        ],
+        "type": "Point"
+      },
+      "id": "9dbbecd379e18278583ec22cd81b5588"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Yellow union building with yellow car",
+        "Type": "photo",
+        "Place": "union office",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJjbwVStfvzLgbwphQW"
+      },
+      "geometry": {
+        "coordinates": [
+          105.679381,
+          -10.424716
+        ],
+        "type": "Point"
+      },
+      "id": "a591cee428d06363b74776b44421d883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "\"Children from the families of the 40 houses in Settlement, now Police Padang. Photo taken 1968.\"",
+        "Type": "photo",
+        "Place": "forty houses",
+        "Date": "1968",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.67391,
+          -10.419034
+        ],
+        "type": "Point"
+      },
+      "id": "ad701cafccf557e985b6648529dc677a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Singapore is wife are used to have a tea company your dad worked in the kitchen there my dad is a chef OK so do you have tea with a manager or we have tea with the manager cook for them and then I ended a father like a housekeeping yeah and then there's a military lady call Halima she's doing the other company and then you know Ching homespun know he's helpful to my dad OK offers as well my dad is like a chickenshit yeah what is this room",
+        "Type": "audio",
+        "Place": "",
+        "Date": "",
+        "Source": "",
+        "Media": "./c92584e5-af95-47d8-acf4-487783df727e.aac"
+      },
+      "geometry": {
+        "coordinates": [
+          105.682191,
+          -10.417161
+        ],
+        "type": "Point"
+      },
+      "id": "f388c3a1f1d521c117e7bef23b0cb4f9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Description": "Virgin's castle from Gaze Road with red car in foreground",
+        "Type": "photo",
+        "Place": "virgin's castle",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCFdDJnPKvdRFnvZVjx?projector=1&messagePartId=0.1"
+      },
+      "geometry": {
+        "coordinates": [
+          105.673142,
+          -10.422497
+        ],
+        "type": "Point"
+      },
+      "id": "fb9afa3cd660290b8648dbd1ded044e7"
+    }
+  ],
+  "type": "FeatureCollection"
+}
