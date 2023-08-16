@@ -23,12 +23,15 @@
     	onChange="filterData(this.value.toLowerCase())"/>
       <button id="clear" class="clear-results">Clear</button>
     </form>
+  <button id="add-data" onclick="addData()">Add Data</button>
+ 	<div id="info">
+ 	</div>
 	</div>
 
 <script>
 	
 	// Set default view to Christmas Island, centered
-	var map = L.map('map').setView([-10.445,105.67], 13);
+	var map = L.map('map').setView([-10.477061,105.630076], 12);
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     	maxZoom: 19,
     	attribution: '© OpenStreetMap'
@@ -46,10 +49,29 @@
 	// For each feature in ciData, add a popup
 	function onEachFeature(feature, layer) {
     	// Check that this feature has the properties to be displayed
-    	if (feature.properties && feature.properties.Description) {
+    	if (feature.properties && feature.properties.Title) {    		
+
+				/*var tooltip = L.tooltip({permanent: true, offset: [0, 0], direction: "auto", interactive: true });
+    		tooltip.setContent(`
+    		<img class="img-labels" src="${feature.properties.Media}"></img>
+    		<p>${feature.properties.Title}</p>
+    		`)
+    		console.log(feature.geometry.coordinates);
+				tooltip.setLatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+				tooltip.addTo(map);
+				tooltip.on(`click`, showMarkerData(feature));*/
+
+        /*tooltip.on("click", showMarkerData(feature));
+        layer.bindTooltip(tooltip);*/
+
+    		layer.bindTooltip(`
+    		<img class="img-labels" src="${feature.properties.Media}"></img>
+    		<p>${feature.properties.Title}</p>
+    		`, {permanent: true, offset: [0, 0], direction: "auto", interactive: true });
         	layer.bindPopup(`
-        		<h3>${feature.properties.Date}</h3>
+        		<h3>${feature.properties.Title}</h3>
         		<p>${feature.properties.Description}</p>
+        		<img class="popup-img" src="${feature.properties.Media}"></img>
         		<p>From ${feature.properties.Source}</p>
         	`);
     	}
@@ -61,22 +83,56 @@
 	L.geoJSON(ciData, {
     	pointToLayer: function (feature, latlng) {
     		var marker = L.circleMarker(latlng, geojsonMarkerOptions);
+    		// marker.on('click', showMarkerData(feature));
     		markers.push(marker);
     		return marker;
     	},
     	onEachFeature: onEachFeature
 	}).addTo(map);
 
+	function circleClick(e) {
+		console.log(e);
+  const name = e.sourceTarget.options.name;
+  document.getElementById('name').innerHTML = name;
+}
+
 	// Removes all markers whose popup content doesn't match the specified search term
 	function filterData(searchTerm) {
 			markers.forEach( function(marker) {
-				var textToSearch = marker._popup._content.toLowerCase();
-				// If the marker description doesn't include the search text, remove it
-				if (!textToSearch.includes(searchTerm)) { 
-					map.removeLayer(marker);
-				}
+				console.log(marker.feature.properties);
+
+				var textToSearch = marker.feature.properties.Description + marker.feature.properties.Title;
+				if (textToSearch === undefined || !textToSearch.toLowerCase().includes(searchTerm)) map.removeLayer(marker);;
+				/*var textToSearch = marker.feature.properties.description.toLowerCase();
+					// If the marker description doesn't include the search text, remove it
+					if (!textToSearch.includes(searchTerm)) { 
+					
+				}*/
 			});
 	}
+
+	function showMarkerData(feature) {
+		console.log(feature.properties.Title);
+		document.getElementById("info").innerHTML = "<p>${feature.properties.Title}</p>";
+	}
+
+	// Listen for click on map, record lat / long of point
+	function onMapClick(e) {
+		var popup = L.popup();
+		popup
+			.setLatLng(e.latlng)
+			.setContent("You clicked a point at " + e.latlng.toString())
+			.openOn(map);
+	}
+
+ 	// Enter an editorial mode for users to add data points to the map (collect lat/long and text input)
+	function addData() {
+		//console.log(document.body.style.cursor);
+		document.body.style.cursor = "pointer";
+		map.on('click', onMapClick);
+	
+	}
+
 </script>
 
 </body>

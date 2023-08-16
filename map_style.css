@@ -15,12 +15,48 @@ form {
 	justify-content: space-around;
 }
 
+.img-labels {
+	width: 175px;
+	opacity: 1;
+}
+
+.leaflet-tooltip {
+	background-color: rgba(255, 255, 255, .5);
+	border: none;
+	font-family: "Courier New";
+	line-height: 12px;
+	/* box-shadow: none; */
+    white-space: normal;
+} 
+
+.leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
+	border-left-color: transparent;
+} 
+
+#add-data {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 700;
+	font-size: 24px;
+}
+
+
 #clear {
 	width: 20%;
 }
 
-#search {
-	width: 75%
+#info {
+	background-color: white;
+	opacity: .7;
+
+	position: absolute;
+	right: 2%;
+	top: 10%;
+	height: 80%;
+	width: 25%;
+
+	z-index: 700;
 }
 
 #map { 
@@ -28,5 +64,9 @@ form {
 	top: 0; 
 	bottom: 0; 
 	width: 100%; 
+}
+
+#search {
+	width: 75%
 }
 

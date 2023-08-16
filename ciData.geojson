@@ -3,31 +3,145 @@ var ciData = {
     {
       "type": "Feature",
       "properties": {
-        "Description": "Forty houses at the edge of Gaze road",
+        "Title": "Kampong - 1988 after the cyclone",
+        "Description": "",
         "Type": "photo",
-        "Place": "forty houses",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
+        "Date": "1988",
+        "Source": "Mily Barrett",
+        "Media": "https://scontent.fper3-1.fna.fbcdn.net/v/t39.30808-6/346032133_274717488237974_4150094425975484955_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=BSWMf69frzkAX9BrKuV&_nc_ht=scontent.fper3-1.fna&oh=00_AfBaoVMbdTR0EzRvGHtqf_w2RGPa5YjkRmUcKpKmTrs9fQ&oe=64E1426D"
       },
       "geometry": {
         "coordinates": [
-          105.67391,
-          -10.419034
+          105.671108,
+          -10.42869
         ],
         "type": "Point"
       },
-      "id": "333fea487b1ba74c74657bf614f88159"
+      "id": "18192fffc0586cd27643ce91b2a84fe7"
     },
     {
       "type": "Feature",
       "properties": {
-        "Description": "\"Children from the families of the 40 houses in Settlement, now Police Padang. Photo taken 1968.\"",
+        "Title": "Union Building, late 1980s",
+        "Description": "Union of Christmas Island Workers building with a yellow car in front",
         "Type": "photo",
-        "Place": "forty houses",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "images/union_car.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          105.679381,
+          -10.424716
+        ],
+        "type": "Point"
+      },
+      "id": "181e86791d919efdebe90b95513ce4a8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "The old Gospel house (below Youth Club) - 1988 after the cyclone. Later became Cheryl Wright's shop?",
+        "Description": "This building was a Staff club I used to play billiards there and later it was a majon meeting place, then later it was a Church and still later it became an Old boys club. Now it Is a Tourist Information Centre. - Steve Chia",
+        "Type": "photo",
+        "Date": "1988",
+        "Source": "Mily Barrett",
+        "Media": "https://scontent.fper3-1.fna.fbcdn.net/v/t39.30808-6/345900160_788881216193657_7376834569245323522_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=W0sU1tzGQhgAX_pnAFS&_nc_ht=scontent.fper3-1.fna&oh=00_AfDlVtLKDSRNETeLVMxIz2TFrnF85uOn_7HEDs2DhchO1A&oe=64E203D7"
+      },
+      "geometry": {
+        "coordinates": [
+          105.672567,
+          -10.423249
+        ],
+        "type": "Point"
+      },
+      "id": "23074ec4ecd7f55b0d40e9872b7e6363"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Settlement Shops - 1988 after the cyclone",
+        "Description": "Alex Goh doing cleanup (source: Stella Pereira, on Facebook). ",
+        "Type": "photo",
+        "Date": "1988",
+        "Source": "Mily Barrett",
+        "Media": "https://scontent.fper3-1.fna.fbcdn.net/v/t39.30808-6/346083213_1635982403536427_4049415668208421333_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=LofC68xgiXcAX_4n-NG&_nc_ht=scontent.fper3-1.fna&oh=00_AfDBzVQsQgewWi6DZYgPv5xJE-bkLvLJiYoT7-Cz1ziupQ&oe=64E0FA21"
+      },
+      "geometry": {
+        "coordinates": [
+          105.672863,
+          -10.421655
+        ],
+        "type": "Point"
+      },
+      "id": "2c1e4f5abaac87de31ffb3842105aca9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Map of South Point Settlement, drawn from memory.",
+        "Description": "Each block in South Point held 5 families. The author's family, the Chongs, are the second from the right",
+        "Type": "photo",
+        "Date": "1955",
+        "Source": "Chong Yoke Kwang",
+        "Media": "images/southpoint_1.jpeg"
+      },
+      "geometry": {
+        "coordinates": [
+          105.645699,
+          -10.558977
+        ],
+        "type": "Point"
+      },
+      "id": "4185b16237da9c874e73308073fd13da"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Group photo outside union house",
+        "Description": "\"Union House aka Yellow House\" - from Seet Choy Lan. 1970s-80s.",
+        "Type": "photo",
+        "Date": "",
+        "Source": "Seet Choy Lan",
+        "Media": "images/union_group.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          105.67938,
+          -10.4247
+        ],
+        "type": "Point"
+      },
+      "id": "a2c911c169334e412fe2ddb48028a297"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "Dance classes at George Fam",
+        "Description": "When the secondary school relocated, Arts and Culture was allocated two rooms at George Fam as our first ‘home’. We received a grant to refurbish the area and indeed held ballet classes there. Dance teacher Stella Raze-Johnston and family arrived by yacht and stayed for several years. We even held a blockbuster performance of the Nutcracker in the Sports Hall. When the Shire moved to GF, Arts was offered a lease on the current room at the Old Tech School, which Parks were vacating… a few recollections.",
+        "Type": "text",
+        "Date": "1989",
+        "Source": "Patricia Marie Power",
+        "Media": ""
+      },
+      "geometry": {
+        "coordinates": [
+          105.674477,
+          -10.421429
+        ],
+        "type": "Point"
+      },
+      "id": "cfb11f35eb80fbc7eb50b5d07e074b56"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Title": "\"Children from the families of the 40 houses in Settlement, now Police Padang. Photo taken 1968.\"",
+        "Description": "",
+        "Type": "photo",
         "Date": "1968",
         "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
+        "Media": "images/40houses.JPG"
       },
       "geometry": {
         "coordinates": [
@@ -36,193 +150,7 @@ var ciData = {
         ],
         "type": "Point"
       },
-      "id": "46b9ed3ba6721f14cf21ded8c6877983"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Date": "",
-        "Description": "former Asian swimming pool"
-      },
-      "geometry": {
-        "coordinates": [
-          105.673082,
-          -10.419494
-        ],
-        "type": "Point"
-      },
-      "id": "4c9faffb8df174e157a48585977a7b9e"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Virgin's castle from Gaze Road with red car in foreground",
-        "Type": "photo",
-        "Place": "virgin's castle",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCFdDJnPKvdRFnvZVjx?projector=1&messagePartId=0.1"
-      },
-      "geometry": {
-        "coordinates": [
-          105.673142,
-          -10.422497
-        ],
-        "type": "Point"
-      },
-      "id": "57cac0581e55b4dd0dc72e7155fa5075"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Group photo outside yellow union house",
-        "Type": "photo",
-        "Place": "union office",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJQFRnrJrjpWcHBgNnH?projector=1&messagePartId=0.1"
-      },
-      "geometry": {
-        "coordinates": [
-          105.679381,
-          -10.424716
-        ],
-        "type": "Point"
-      },
-      "id": "5ab7afdd5b1603d26b439b132f37d183"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Group photo outside yellow union house",
-        "Type": "photo",
-        "Place": "union office",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJQFRnrJrjpWcHBgNnH?projector=1&messagePartId=0.1"
-      },
-      "geometry": {
-        "coordinates": [
-          105.679381,
-          -10.424716
-        ],
-        "type": "Point"
-      },
-      "id": "71ccaeb9c0d419d9825386b4580ffa79"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Forty houses at the edge of Gaze road",
-        "Type": "photo",
-        "Place": "forty houses",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
-      },
-      "geometry": {
-        "coordinates": [
-          105.67391,
-          -10.419034
-        ],
-        "type": "Point"
-      },
-      "id": "98053a0b5dfeae5fe13dd51d8bf305c9"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Yellow union building with yellow car",
-        "Type": "photo",
-        "Place": "union office",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJjbwVStfvzLgbwphQW"
-      },
-      "geometry": {
-        "coordinates": [
-          105.679381,
-          -10.424716
-        ],
-        "type": "Point"
-      },
-      "id": "9dbbecd379e18278583ec22cd81b5588"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Yellow union building with yellow car",
-        "Type": "photo",
-        "Place": "union office",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgWJjbwVStfvzLgbwphQW"
-      },
-      "geometry": {
-        "coordinates": [
-          105.679381,
-          -10.424716
-        ],
-        "type": "Point"
-      },
-      "id": "a591cee428d06363b74776b44421d883"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "\"Children from the families of the 40 houses in Settlement, now Police Padang. Photo taken 1968.\"",
-        "Type": "photo",
-        "Place": "forty houses",
-        "Date": "1968",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCXCsrChFJskWXbGCxD?projector=1&messagePartId=0.1"
-      },
-      "geometry": {
-        "coordinates": [
-          105.67391,
-          -10.419034
-        ],
-        "type": "Point"
-      },
-      "id": "ad701cafccf557e985b6648529dc677a"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Singapore is wife are used to have a tea company your dad worked in the kitchen there my dad is a chef OK so do you have tea with a manager or we have tea with the manager cook for them and then I ended a father like a housekeeping yeah and then there's a military lady call Halima she's doing the other company and then you know Ching homespun know he's helpful to my dad OK offers as well my dad is like a chickenshit yeah what is this room",
-        "Type": "audio",
-        "Place": "",
-        "Date": "",
-        "Source": "",
-        "Media": "./c92584e5-af95-47d8-acf4-487783df727e.aac"
-      },
-      "geometry": {
-        "coordinates": [
-          105.682191,
-          -10.417161
-        ],
-        "type": "Point"
-      },
-      "id": "f388c3a1f1d521c117e7bef23b0cb4f9"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Description": "Virgin's castle from Gaze Road with red car in foreground",
-        "Type": "photo",
-        "Place": "virgin's castle",
-        "Date": "",
-        "Source": "Seet Choy Lan",
-        "Media": "https://mail.google.com/mail/u/0/#inbox/FMfcgzGsnLCxgVCFdDJnPKvdRFnvZVjx?projector=1&messagePartId=0.1"
-      },
-      "geometry": {
-        "coordinates": [
-          105.673142,
-          -10.422497
-        ],
-        "type": "Point"
-      },
-      "id": "fb9afa3cd660290b8648dbd1ded044e7"
+      "id": "f24648b342b0347253393027233c203b"
     }
   ],
   "type": "FeatureCollection"
