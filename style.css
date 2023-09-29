@@ -114,7 +114,7 @@ img {
 
 .label {
   font-family: 'Inter', monospace;
-  text-align: center;
+  text-align: left;
   display: grid;
   color: black;
   margin: auto;
