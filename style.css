@@ -39,6 +39,12 @@ button:hover {
   margin-right: 10%;
 }
 
+.centered-small {
+  width: 30%;
+  margin-left: 35%;
+  maring-right: 35%;
+}
+
 .center-text {
   width: 50%;
   margin: auto;
@@ -54,6 +60,10 @@ button:hover {
 
 .column {
   width: 30%;
+}
+
+.column-wide {
+  width: 45%;
 }
 
 /*body {
